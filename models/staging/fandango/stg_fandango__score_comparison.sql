@@ -28,9 +28,8 @@ final as (
       "METACRITIC_USER_VOTE_COUNT" as metacritic_user_vote_count,
       "IMDB_USER_VOTE_COUNT" as imdb_user_vote_count,
       "FANDANGO_VOTES" as fandango_votes,
-      "FANDANGO_DIFFERENCE" as fandango_difference,
-        "FANDANGO_DIFFERENCE" as fandango_test 
-    
+      "FANDANGO_DIFFERENCE" as fandango_difference
+      
     
 
   from score_comparison
