@@ -2,4 +2,19 @@ version: 2
 
 models:
   - name: stg_fandango__score_comparison
+    columns:
+      - name: movie_id
+        tests:
+          - unique
+      - name: movie_name
+        tests:
+          - not_null
+
   - name: stg_fandango__srape
+    columns:
+      - name: movie_id
+        tests:
+          - unique
+      - name: movie_name
+        tests:
+          - not_null
