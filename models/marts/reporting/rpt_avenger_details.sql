@@ -10,11 +10,6 @@ avenger_activity as (
 
 ),
 
-favorite_avengers as (
-
-    select * from {{ ref('my_favorite_avengers') }}
-
-),
 
 final as (
 
@@ -41,16 +36,11 @@ final as (
         avenger_activity.total_deaths,
         avenger_activity.total_returns,
         avenger_details.notes
-        favorite_avengers.avenger_name is not null as is_favorite_avenger
 
     from avenger_details
 
     left join avenger_activity
         on avenger_details.avenger_id = avenger_activity.avenger_id
-
-    left join favorite.avengers
-        on avenger_details.avenger_name = favorite_avengers.avenger_name
-    
 
 )
 
